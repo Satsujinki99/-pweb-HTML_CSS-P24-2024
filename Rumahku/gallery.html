@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gallery - Rumahku</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">Rumahku</div>
-            <ul>
+            <button class="navbar-toggler" aria-label="Toggle navigation">
+                <span class="toggler-icon"></span>
+            </button>
+            <ul class="navbar-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -23,16 +26,40 @@
 
     <section class="gallery">
         <h2>Our Gallery</h2>
-        <div class="gallery-grid">
-            <img src="images/property1.jpg" alt="Property 1">
-            <img src="images/property2.jpg" alt="Property 2">
-            <img src="images/property3.jpg" alt="Property 3">
-            <img src="images/property4.jpg" alt="Property 4">
+        <div class="gallery-container">
+            <div class="property-box">
+                <img src="https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-modern-2-lantai-42250223-75573483250223093015-0.jpg" alt="Property 1">
+                <h3>Property 1</h3>
+                <p>Modern 2-story house design with minimalist style.</p>
+            </div>
+            <div class="property-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6sgeVitbjmOQYeVhAEx_j4p1S9hBlHu5vlg&s" alt="Property 2">
+                <h3>Property 2</h3>
+                <p>Contemporary house with innovative architecture.</p>
+            </div>
+            <div class="property-box">
+                <img src="https://nazlainterior.id/wp-content/uploads/2024/09/desain-rumah-minimalis-modern-1-lantai.jpg" alt="Property 3">
+                <h3>Property 3</h3>
+                <p>Single-story house with modern minimalist concept.</p>
+            </div>
+            <div class="property-box">
+                <img src="https://www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-modern-1-lantai-55290723-9922311231223101538.jpg" alt="Property 4">
+                <h3>Property 4</h3>
+                <p>Elegant 1-story house with a modern design approach.</p>
+            </div>
+            <div class="property-box">
+                <img src="https://www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-modern-1-lantai-55290723-9922311231223101538.jpg" alt="Property 5">
+                <h3>Property 5</h3>
+                <p>Elegant 1-story house with a modern design approach.</p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; Rumahku. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Rumahku. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
