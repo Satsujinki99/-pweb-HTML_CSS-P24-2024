@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    margin-top: 50px; 
+    margin-top: 50px;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
@@ -30,7 +30,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;  /* Ensure it stays on top of other elements */
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,47 +99,56 @@ header {
     .navbar {
         position: relative;
     }
-
-    .gallery-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .property-box {
-        width: 100%;
-    }
 }
 
-/* Gallery Section */
-.gallery-container {
+/* Testimonials Section */
+.testimonials-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling for the testimonial boxes */
+    max-height: 600px; /* Set max height for the scroll area */
+}
+
+.testimonial-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 150px; /* Grid layout for text and image */
     gap: 20px;
     padding: 20px;
+    align-items: center;
 }
 
-.property-box {
-    background-color: #fff;
-    border-radius: 15px;
-    width: 300px;
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Align text to the left */
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-.property-box img {
-    width: 100%;
-    border-radius: 10px;
+.testimonial-text h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
 }
 
-.property-box h3 {
-    font-size: 1.25rem;
-    margin: 10px 0;
-}
-
-.property-box p {
+.testimonial-text p {
+    font-size: 1.1rem;
     color: #666;
+    line-height: 1.5;
+}
+
+.testimonial-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Footer */
@@ -149,6 +158,6 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: 40px;
+    width: 100%;
 }
-
 

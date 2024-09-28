@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    margin: 0;
+    margin-top: 90px;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -18,32 +18,37 @@ ul {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-
-/* Logo */
 .logo {
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    color: #0066cc;
-    padding: 20px;
+    display: flex; /* Mengatur elemen menjadi flex container */
+    align-items: center; /* Menyelaraskan item secara vertikal */
 }
 
-.logo i {
-    margin-right: 10px;
+.logo img {
+    width: 50px; /* Sesuaikan ukuran gambar */
+    height: auto; /* Mempertahankan rasio aspek */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.logo h1 {
+    font-size: 2rem; /* Ukuran font untuk judul */
+    margin: 0; /* Menghilangkan margin default */
 }
 
 /* Navigation */
 .tm-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure it stays on top of other elements */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #0066cc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Optional shadow for better visual */
 }
+
 
 .tm-nav ul {
     display: flex;
@@ -161,14 +166,17 @@ main {
 
 /* Parallax Section */
 .tm-parallax {
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 500px;
-    width: 50%;
+    height: 100%; /* Tinggi default */
+    width: 100%;
+    padding: 20px;
 }
 
+
 [data-parallax] {
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 /* Hero Section */
@@ -212,7 +220,4 @@ footer {
     margin-top: 40px;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
