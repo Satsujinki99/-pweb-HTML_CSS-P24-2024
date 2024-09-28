@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    
 }
 
 h1 {
@@ -24,57 +25,104 @@ a {
 }
 
 /* Header */
-.tm-nav {
+header {
+    background-color: #0066cc;
+    padding: 10px 20px;
+}
+
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000;  
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
     background-color: #0066cc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin: 0 auto; 
+    box-sizing: border-box; 
 }
 
-.tm-nav .logo {
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    color: #fff;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 5px;
 }
 
-.tm-nav ul {
+.navbar-links {
     display: flex;
     gap: 20px;
 }
 
-.tm-nav .nav-item {
-    padding: 10px;
+.navbar-links li {
+    list-style: none;
 }
 
-.tm-nav .nav-link {
-    color: #fff;
-    font-weight: bold;
+.navbar-links li a {
+    color: white;
     padding: 10px 15px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.tm-nav .nav-link:hover, 
-.tm-nav .nav-link.current {
-    background-color: #004c99;
+.navbar-links li a:hover,
+.navbar-links li a.active {
+    background-color: #005bb5;
     border-radius: 5px;
+}
+
+.navbar-toggler {
+    display: none;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #0066cc;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: block;
+        color: white;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .about-content-flex {
+        flex-direction: column;
+    }
+
+    .image-box img {
+        max-width: 100%;
+    }
 }
 
 /* About Us Section */
 .about {
-    padding-top: 120px; /* Add sufficient padding to prevent text from being hidden under the navbar */
+    padding-top: 100px; 
     text-align: center;
 }
 
 .about-title {
-    margin-top: 20px; /* Additional margin if needed */
+    margin-top: 15px; 
     font-size: 2rem;
     font-weight: bold;
 }
@@ -118,13 +166,3 @@ footer {
     text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-content-flex {
-        flex-direction: column;
-    }
-
-    .image-box img {
-        max-width: 100%;
-    }
-}
